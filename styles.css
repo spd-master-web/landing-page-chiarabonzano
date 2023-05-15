@@ -22,32 +22,40 @@ h1 {
   margin: 0;
 
   font-size: 56px;
+  color: var(--black);
 }
 
 h2 {
   margin: 0;
+  max-width: 600px;
 
   font-size: 38px;
+  color: var(--black);
 }
 
 h3 {
   margin: 0;
 
   font-size: 28px;
+  color: var(--black);
 }
 
 p {
   margin: 0;
+  padding-top: 10px;
 
   font-size: 16px;
+  color: var(--black);
 }
 
 strong {
   font-size: 20px;
+  color: var(--black);
 }
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 
 /* HEADER */
@@ -165,8 +173,6 @@ a {
 }
 
 .healthy-salmon > h2 {
-  max-width: 45vw;
-
   text-align: center;
 }
 
@@ -221,7 +227,7 @@ a {
 /* FEATURES SECTION */
 
 .features {
-  padding: 80px 80px;
+  padding: 80px;
 
   display: flex;
   justify-content: space-evenly;
@@ -253,7 +259,6 @@ a {
 }
 
 .feature-item > p {
-  padding-top: 10px;
   color: var(--white);
 }
 
@@ -293,6 +298,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .recipe-cards-wrapper {
@@ -316,6 +322,26 @@ a {
   max-width: 336px;
 }
 
-.recipe-card-text > p {
-  padding-top: 10px;
+/* WARRANTY SECTION */
+
+.warranty {
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background-color: var(--black);
+}
+
+.warranty > h3 {
+  color: var(--green);
+}
+
+.warranty > p {
+  max-width: 750px;
+
+  color: var(--white);
 }
