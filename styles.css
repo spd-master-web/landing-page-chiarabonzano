@@ -5,17 +5,22 @@
 :root {
   --margin: 0 80px; 
   --padding: 60px 0;
+
+  --background-color: #e7e9e7;
   --black: #1e1e1e;
-  --white: #fff;
+  --white: #e7e9e7;
   --gray: #d7d7d7;
   --green: #91d457;
   --border: 2px solid #1e1e1e;
+  --border-radius: 20px;
   --box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
 body, html {
   margin: 0;
+
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
 }
 
 h1 {
@@ -58,13 +63,16 @@ a {
   color: var(--black);
 }
 
-/* HEADER */
+/* header */
 
 .header {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
 
   background-color: var(--black);
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.15);
 }
 
 .header-logo {
@@ -79,7 +87,7 @@ a {
   font-size: 24px;
 }
 
-/* NAVIGATION */
+/* navigation */
 
 .main-nav {
   padding: 15px 30px;
@@ -88,11 +96,13 @@ a {
   justify-content: center;
 
   background-color: var(--gray);
+  border-bottom: var(--border);
 }
 
 .nav-list {
   width: 100%;
   margin: 0;
+  padding: 0;
 
   display: flex;
   justify-content: space-around;
@@ -111,8 +121,8 @@ a {
   border-bottom: var(--border);
 }
 
-/* MAIN */
-/* HERO > WELCOME SECTION */
+/* main */
+/* hero > welcome section */
 
 .hero {
   margin: var(--margin);
@@ -147,14 +157,19 @@ a {
   font-size: 18px
 }
 
-.buy-now-btn {
+.btn {
   padding: 10px 40px;
+
+  color: var(--black);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.btn.buy-now-btn {
 
   background-color: var(--black);
   color: var(--white);
   text-transform: uppercase;
-  border-radius: 20px;
-  border: var(--border);
 }
 
 .buy-now-btn:hover {
@@ -162,7 +177,7 @@ a {
   color: var(--black);
 }
 
-/* HERO > HEALTHY-SALMON SECTION */
+/* hero > healthy-salmon section */
 
 .healthy-salmon {
   padding-top: 80px;
@@ -203,18 +218,15 @@ a {
   text-align: center;
 }
 
-.learn-more-btn {
+.btn.learn-more-btn {
   margin-top: 60px;
   padding: 10px 60px 10px 30px;
 
   display: inline-block;
 
   background-color: var(--white);
-  color: var(--black);
-  border-radius: 20px;
-  border: var(--border);
 
-  background-image: url(img/arrow-icon.png);
+  background-image: url(img/icons/arrow-icon.png);
   background-repeat: no-repeat;
   background-position: center right 30px;
   background-size: 10px auto;
@@ -224,7 +236,7 @@ a {
   background-color: var(--green);
 }
 
-/* FEATURES SECTION */
+/* features section */
 
 .features {
   padding: 80px;
@@ -263,33 +275,33 @@ a {
 }
 
 .feature-item.cooking {
-  background-image: url(img/air-fryer-icon.png);
+  background-image: url(img/icons/air-fryer-icon.png);
   background-repeat: no-repeat;
   background-position: center left;
 }
 
 .feature-item.app {
-  background-image: url(img/touch-screen-icon.png);
+  background-image: url(img/icons/touch-screen-icon.png);
   background-repeat: no-repeat;
   background-position: center left 22px;
   background-size: 130px;
 }
 
 .feature-item.wifi {
-  background-image: url(img/wifi-icon.png);
+  background-image: url(img/icons/wifi-icon.png);
   background-repeat: no-repeat;
   background-position: center left 22px;
   background-size: 130px;
 }
 
 .feature-item.heart {
-  background-image: url(img/heart-icon.png);
+  background-image: url(img/icons/heart-icon.png);
   background-repeat: no-repeat;
   background-position: center left 35px;
   background-size: 100px;
 }
 
-/* COOKBOOK SECTION */
+/* cookbook section */
 
 .cookbook {
   margin: var(--margin);
@@ -322,7 +334,7 @@ a {
   max-width: 336px;
 }
 
-/* WARRANTY SECTION */
+/* warranty section */
 
 .warranty {
   padding: 80px;
@@ -344,4 +356,80 @@ a {
   max-width: 750px;
 
   color: var(--white);
+}
+
+/* footer */
+/* newsletter section */
+
+.footer {
+  padding: 80px 80px 20px 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--gray);
+}
+
+.newsletter {
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  text-align: center;
+}
+
+.form {
+  padding: 15px 0;
+}
+
+input[type=email] {
+  padding: 10px 40px;
+  min-width: 350px;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.submit-btn:hover {
+  background-color: var(--green);
+}
+
+.unsubscribe {
+  padding-top: 10px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* share section */
+
+.share {
+  width: 100%;
+  padding: 40px 0;
+
+  border-top: var(--border);
+}
+
+.links-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+.link-item {
+  padding: 0 10px;
+}
+
+/* copyright */
+
+.copyright > p {
+  font-size: 14px;
 }
