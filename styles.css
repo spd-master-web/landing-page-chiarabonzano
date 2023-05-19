@@ -261,7 +261,6 @@ img {
 
 .features-wrapper {
   max-width: 500px;
-  min-height: 350px;
 
   display: flex;
   flex-direction: column;
@@ -275,6 +274,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  background-repeat: no-repeat;
 }
 
 .feature-item > h3 {
@@ -285,29 +286,25 @@ img {
   color: var(--white);
 }
 
-.feature-item.cooking {
+.cooking {
   background-image: url(img/icons/air-fryer-icon.png);
-  background-repeat: no-repeat;
   background-position: center left;
 }
 
-.feature-item.app {
+.app {
   background-image: url(img/icons/touch-screen-icon.png);
-  background-repeat: no-repeat;
   background-position: center left 22px;
   background-size: 130px;
 }
 
-.feature-item.wifi {
+.wifi {
   background-image: url(img/icons/wifi-icon.png);
-  background-repeat: no-repeat;
   background-position: center left 22px;
   background-size: 130px;
 }
 
-.feature-item.heart {
+.heart {
   background-image: url(img/icons/heart-icon.png);
-  background-repeat: no-repeat;
   background-position: center left 35px;
   background-size: 100px;
 }
@@ -333,6 +330,8 @@ img {
 }
 
 .recipe-card {
+  margin-right: 10px;
+
   display: flex;
   flex-direction: column;
 
@@ -340,6 +339,10 @@ img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   background-color: var(--white);
+}
+
+.recipe-card:last-child {
+  margin-right: 0;
 }
 
 .recipe-card-image > img {
@@ -405,7 +408,7 @@ img {
 
 input[type=email] {
   padding: 10px 40px;
-  min-width: 350px;
+  min-width: 250px;
 
   border: var(--border);
   border-radius: var(--border-radius);
@@ -449,5 +452,138 @@ input[type=email] {
 /* copyright */
 
 .copyright > p {
+  text-align: center;
   font-size: 14px;
+}
+
+/* tablet viewport */
+@media (max-width: 1024px) {
+  h3{
+    font-size: 22px;
+  }
+
+  .hero {
+    margin: 0 40px;
+    padding-top: 40px;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-text {
+    padding-top: 20px;
+  }
+
+  .features {
+    padding: 40px 60px
+  }
+
+  .feature-item {
+    padding-left: 130px;
+    background-size: 100px;
+  }
+
+  .heart {
+    background-size: 80px;
+  }
+
+  .cookbook {
+    margin: 0 40px;
+  }
+
+  .recipe-card-text {
+    padding: 10px;
+  }
+
+  .warranty {
+    padding: 40px;
+  }
+
+  .footer {
+    padding: 40px 40px 10px 40px;
+  }
+}
+
+/* mobile viewport */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .hero {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .welcome-text {
+    padding: 50px 24px 10px 24px;
+  }
+
+  .healthy-salmon {
+    padding: 80px 0 0 0;
+  }
+
+  .healthy-salmon > h2 {
+    padding: 0 24px;
+  }
+
+  .healthy-salmon-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .healthy-salmon-text {
+   padding: 40px 24px 0 24px;
+  }
+
+  .healthy-salmon-text > p {
+    font-size: 18px;
+  }
+
+  .features {
+    padding: 20px 24px;
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .feature-item {
+    margin-bottom: 15px;
+  }
+
+  .cooking {
+    background-position: center left 18px;
+  }
+
+  .cookbook {
+    margin: 0 24px;
+  }
+
+  .recipe-cards-wrapper {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe-card {
+    margin: 0 40px 24px 40px;
+  }
+
+  .recipe-card:last-child {
+    margin: 0 40px;
+  }
 }
