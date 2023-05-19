@@ -146,11 +146,59 @@
       y: 20,
       scrollTrigger: {
         trigger: ".healthy-salmon-text",
-        markers: true,
+        // markers: true,
         start: "0 50%",
-        end: "100% 40%",
-        toggleActions: "play none reverse none"
+        toggleActions: "play none none none"
       } 
+    });
+
+    gsap.from(".cooking", {
+      duration: .5,
+      delay: .5,
+      opacity: 0,
+      y: 20,
+      scrollTrigger: {
+        trigger: ".cooking",
+        // markers: true,
+        start: "0 60%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".app", {
+      duration: .5,
+      delay: .8,
+      opacity: 0,
+      y: 20,
+      scrollTrigger: {
+        trigger: ".app",
+        start: "0 60%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".wifi", {
+      duration: .5,
+      delay: 1.1,
+      opacity: 0,
+      y: 20,
+      scrollTrigger: {
+        trigger: ".wifi",
+        start: "0 60%",
+        toggleActions: "play none none none"
+      }
+    });
+
+    gsap.from(".heart", {
+      duration: .5,
+      delay: 1.4,
+      opacity: 0,
+      y: 20,
+      scrollTrigger: {
+        trigger: ".heart",
+        start: "0 60%",
+        toggleActions: "play none none none"
+      }
     });
   </script>
 </body>
