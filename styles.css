@@ -1,0 +1,590 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --margin: 0 80px; 
+  --padding: 60px 0;
+
+  --background-color: #e7e9e7;
+  --black: #1e1e1e;
+  --white: #ffffff;
+  --gray: #d7d7d7;
+  --green: #91d457;
+  --border: 2px solid #1e1e1e;
+  --border-radius: 20px;
+  --box-shadow: 5px 5px 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+body, html {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color);
+}
+
+h1 {
+  margin: 0;
+
+  font-family: 'Climate Crisis', cursive;
+  font-size: 52px;
+  color: var(--black);
+}
+
+h2 {
+  margin: 0;
+  max-width: 600px;
+
+  font-size: 38px;
+  color: var(--black);
+}
+
+h3 {
+  margin: 0;
+
+  font-size: 28px;
+  color: var(--black);
+}
+
+p {
+  margin: 0;
+  padding-top: 10px;
+
+  font-size: 18px;
+  color: var(--black);
+}
+
+strong {
+  font-size: 20px;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  background-color: var(--black);
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.15);
+}
+
+.header-logo {
+  padding: 15px 30px 0 30px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--white);
+  font-family: 'Climate Crisis', cursive;
+  font-size: 24px;
+}
+
+.cart-icon {
+  width: 30px;
+  padding-bottom: 5px;
+}
+
+/* navigation */
+
+.main-nav {
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--gray);
+  border-bottom: var(--border);
+}
+
+.nav-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  list-style-type: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1;
+  color: var(--black);
+}
+
+.nav-item a:hover {
+  border-bottom: var(--border);
+}
+
+/* main */
+/* hero > welcome section */
+
+.hero {
+  margin: var(--margin);
+  padding: var(--padding);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome-image {
+  flex-basis: 60%;
+}
+
+.welcome-text {
+  padding-left: 40px;
+
+  flex-basis: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text > h3 {
+  padding: 10px 0 50px 0;
+}
+
+.btn {
+  padding: 10px 40px;
+
+  color: var(--black);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.btn.buy-now-btn {
+
+  background-color: var(--black);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.buy-now-btn:hover {
+  background-color: var(--green);
+  color: var(--black);
+}
+
+/* hero > healthy-salmon section */
+
+.healthy-salmon {
+  padding-top: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.healthy-salmon > h2 {
+  text-align: center;
+}
+
+.healthy-salmon-content {
+  padding-top: 40px;
+
+  display: flex;
+}
+
+.salmon-image {
+  flex-basis: 50%;
+}
+
+.healthy-salmon-text {
+  padding-left: 40px;
+
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.healthy-salmon-text > p {
+  padding-top: 20px;
+
+  font-size: 22px;
+  text-align: center;
+}
+
+.btn.learn-more-btn {
+  margin-top: 60px;
+  padding: 10px 60px 10px 30px;
+
+  display: inline-block;
+
+  background-color: var(--background-color);
+
+  background-image: url(img/icons/arrow-icon.png);
+  background-repeat: no-repeat;
+  background-position: center right 30px;
+  background-size: 10px auto;
+}
+
+.learn-more-btn:hover {
+  background-color: var(--green);
+}
+
+/* features section */
+
+.features {
+  padding: 80px;
+
+  display: flex;
+  justify-content: space-evenly;
+
+  background-color: var(--black);
+  width: 100vw;
+}
+
+.features-wrapper {
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-item {
+  padding-left: 160px;
+  min-height: 125px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-repeat: no-repeat;
+}
+
+.feature-item > h3 {
+  color: var(--white);
+}
+
+.feature-item > p {
+  color: var(--white);
+}
+
+.cooking {
+  background-image: url(img/icons/air-fryer-icon.png);
+  background-position: center left;
+}
+
+.app {
+  background-image: url(img/icons/touch-screen-icon.png);
+  background-position: center left 22px;
+  background-size: 130px;
+}
+
+.wifi {
+  background-image: url(img/icons/wifi-icon.png);
+  background-position: center left 22px;
+  background-size: 130px;
+}
+
+.heart {
+  background-image: url(img/icons/heart-icon.png);
+  background-position: center left 35px;
+  background-size: 100px;
+}
+
+/* cookbook section */
+
+.cookbook {
+  margin: var(--margin);
+  padding: var(--padding);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.recipe-cards-wrapper {
+  width: 100%;
+  padding: var(--padding);
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  margin-right: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+}
+
+.recipe-card:last-child {
+  margin-right: 0;
+}
+
+.recipe-card-image > img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.recipe-card-text {
+  padding: 25px;
+  max-width: 336px;
+}
+
+/* warranty section */
+
+.warranty {
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background-color: var(--black);
+}
+
+.warranty > h3 {
+  color: var(--green);
+}
+
+.warranty > p {
+  max-width: 750px;
+
+  color: var(--white);
+}
+
+/* footer */
+/* newsletter section */
+
+.footer {
+  padding: 80px 80px 20px 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--gray);
+}
+
+.newsletter {
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  text-align: center;
+}
+
+.form {
+  padding: 15px 0;
+}
+
+input[type=email] {
+  padding: 10px 40px;
+  min-width: 250px;
+
+  border: var(--border);
+  border-radius: var(--border-radius);
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.submit-btn:hover {
+  background-color: var(--green);
+}
+
+.unsubscribe {
+  padding-top: 10px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+/* share section */
+
+.share {
+  width: 100%;
+  padding: 40px 0;
+
+  border-top: var(--border);
+}
+
+.links-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+
+  list-style-type: none;
+}
+
+.link-item {
+  padding: 0 10px;
+}
+
+/* copyright */
+
+.copyright > p {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* tablet viewport */
+@media (max-width: 1024px) {
+  h3{
+    font-size: 22px;
+  }
+
+  .hero {
+    margin: 0 40px;
+    padding-top: 40px;
+  }
+
+  .welcome {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .welcome-text {
+    padding-top: 20px;
+  }
+
+  .features {
+    padding: 40px 60px
+  }
+
+  .feature-item {
+    padding-left: 130px;
+    background-size: 100px;
+  }
+
+  .heart {
+    background-size: 80px;
+  }
+
+  .cookbook {
+    margin: 0 40px;
+  }
+
+  .recipe-card-text {
+    padding: 10px;
+  }
+
+  .warranty {
+    padding: 40px;
+  }
+
+  .footer {
+    padding: 40px 40px 10px 40px;
+  }
+}
+
+/* mobile viewport */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .hero {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .welcome-text {
+    padding: 50px 24px 10px 24px;
+  }
+
+  .healthy-salmon {
+    padding: 80px 0 0 0;
+  }
+
+  .healthy-salmon > h2 {
+    padding: 0 24px;
+  }
+
+  .healthy-salmon-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .healthy-salmon-text {
+   padding: 40px 24px 0 24px;
+  }
+
+  .healthy-salmon-text > p {
+    font-size: 18px;
+  }
+
+  .features {
+    padding: 20px 24px;
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .feature-item {
+    margin-bottom: 15px;
+  }
+
+  .cooking {
+    background-position: center left 18px;
+  }
+
+  .cookbook {
+    margin: 0 24px;
+  }
+
+  .recipe-cards-wrapper {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipe-card {
+    margin: 0 40px 24px 40px;
+  }
+
+  .recipe-card:last-child {
+    margin: 0 40px;
+  }
+}
